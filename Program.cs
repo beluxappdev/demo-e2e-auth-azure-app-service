@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-
-namespace TodoApi
+﻿namespace TodoApi
 {
     public class Program
     {
