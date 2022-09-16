@@ -30,10 +30,7 @@ Update the name and the location of the resource group, the name of the App Serv
 ## Call backend API from front-end
 The first modification of the [tutorial](https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-windows#call-back-end-api-from-front-end) is to modify the .Net code of the frontend to call the backend, to add the authentication and [call the API securely from browser code](https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-windows#call-api-securely-from-browser-code).
 
-The result of this step is available in the branch _frontend_. To deploy it, you need to run the script of this branch _02_Update_Frontend.ps1_:
-```powershell
-az webapp config appsettings set --name $frontendAppName --resource-group $resourceGroup --settings DEPLOYMENT_BRANCH=frontend
-```
+The result of this step is available in the branch _frontend_. To deploy it, you need to run the script of this branch _02_Update_Frontend.ps1_.
 
 >**Note**
 >* Update the name in the script to match the name of the front-end Web App and the resource group created in the previous step.
