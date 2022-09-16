@@ -61,6 +61,13 @@ git push frontendng frontendng
 
 Go back to the previous steps of the tutorial to setup the authorization for front-end-ng the same way it was done for front-end. Do not forget to enable CORS for front-end-ng.
 
+## Use Spring Boot as backend
+The backend is available here: https://github.com/beluxappdev/demo-e2e-auth-azure-app-service-spring. You deploy the backend and add the authorization the same way it is done for _Call backend API from browser code_.
+
+The front-end adapted to Spring backend is available in branch _frontendngspring_. The main differences are the endpoint URL and the name of the variable in the POST request of the UI controller.
+
+For the rest, authentication and CORS is setup in the same way as with the ASP.NET Core backend.
+
 ## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
