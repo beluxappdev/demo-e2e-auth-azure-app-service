@@ -24,6 +24,8 @@ The setup of the front-end and backend can be done using the PowerShell script _
 - An App Service Plan in the resource group with SKU Name: B1 and SKU Tier: Basic and Linux OS
 - A front-end Web App in the resource group and App Service Plan created above. This front-end Web App is configured to use the main branch in the first step of the tutorial
 - A back-end Web App in the resource group and App Service Plan created above. This back-end Web App is configured to use the main branch
+### Note
+Update the name and the location of the resource group, the name of the App Service Plan, the name of the Web Apps to be unique.
 
 ## Contributing
 
