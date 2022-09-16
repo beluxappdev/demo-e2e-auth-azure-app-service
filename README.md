@@ -43,6 +43,24 @@ git checkout frontend
 git push frontend frontend
 ```
 
+## Call backend API from browser code
+The second modification of the [tutorial](https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-windows#call-api-securely-from-browser-code) is to update the Angular front-end to call the backend API from browser code. It retrieves the token and set it in the service.
+
+The result of this step is available in the branch _frontendng_. To deploy it, you need to run the script of this branch _03_Update_Frontend_NG.ps1_.
+
+>**Note**
+>* Update the name in the script to match the name of the front-end-ng Web App and the resource group created in the previous step.
+>* In _index.html_, updae the URL of the back-end Web App (_apiEndpoint_) to your backend URL.
+
+Then you can push the frontendng code of the front-end-ng remote repository using:
+```
+git remote add frontendng <your-front-end-ng-git-repository>
+git checkout frontendng
+git push frontendng frontendng
+```
+
+Go back to the previous steps of the tutorial to setup the authorization for front-end-ng the same way it was done for front-end. Do not forget to enable CORS for front-end-ng.
+
 ## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
