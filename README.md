@@ -24,8 +24,8 @@ The setup of the front-end and backend can be done using the PowerShell script _
 - An App Service Plan in the resource group with SKU Name: B1 and SKU Tier: Basic and Linux OS
 - A front-end Web App in the resource group and App Service Plan created above. This front-end Web App is configured to use the main branch in the first step of the tutorial
 - A back-end Web App in the resource group and App Service Plan created above. This back-end Web App is configured to use the main branch
-### Note
-Update the name and the location of the resource group, the name of the App Service Plan, the name of the Web Apps to be unique.
+>**Note**
+>Update the name and the location of the resource group, the name of the App Service Plan, the name of the Web Apps to be unique.
 
 ## Call backend API from front-end
 The first modification of the [tutorial](https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-windows#call-back-end-api-from-front-end) is to modify the .Net code of the frontend to call the backend, to add the authentication and [call the API securely from browser code](https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-windows#call-api-securely-from-browser-code).
@@ -45,4 +45,3 @@ git push frontend frontend
 ## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-  
