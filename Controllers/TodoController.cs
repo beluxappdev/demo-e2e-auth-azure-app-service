@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 using TodoApi.Models;
 
-namespace demoWebAPI.Controllers
+namespace TodoApi.Controllers
 {
   [Route("api/[controller]")]
     [ApiController]
