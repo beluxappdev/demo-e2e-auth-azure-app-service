@@ -62,8 +62,8 @@ angular.module('todoApp')
             $scope.editingInProgress = false;
         }
         todoListSvc.postItem({
-            'Name': $scope.newToDoName,
-            'IsComplete': false
+            'name': $scope.newToDoName,
+            'isComplete': false
         }).success(function (results) {
             $scope.loadingMsg = "";
             $scope.newToDoName = "";
