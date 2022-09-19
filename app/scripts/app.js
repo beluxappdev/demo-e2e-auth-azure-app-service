@@ -6,11 +6,10 @@ angular.module('todoApp', ['ngRoute'])
     if (!$httpProvider.defaults.headers.get) {
         $httpProvider.defaults.headers.get = {};
     }
-    $httpProvider.defaults.headers.get['If-Modified-Since'] = '0';
 
     $routeProvider.when("/Home", {
         controller: "todoListCtrl",
-        templateUrl: "/App/Views/TodoList.html",
+        templateUrl: "/app/views/TodoList.html",
         resolve: {
             token: ['$http', 'todoListSvc', function ($http, todoListSvc) {
                 return $http.get('/.auth/me').then(function (response) {
@@ -18,7 +17,7 @@ angular.module('todoApp', ['ngRoute'])
                     return response.data[0].access_token;
                 });
             }]
-        }
+        },
     }).otherwise({ redirectTo: "/Home" });
 
     }]);
