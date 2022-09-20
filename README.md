@@ -165,7 +165,7 @@ The front-end is deployed as a static Web App containing only the Angular UI.
 
 ```mermaid
 flowchart LR
-  subgraph "Front-end - Static Web App"
+  subgraph "Front-end Static"
     fui[Angular UI]
   end
   subgraph "Back-end"
@@ -210,7 +210,7 @@ flowchart LR
 Static Web App for the front-end:
 ```mermaid
 flowchart LR
-  subgraph "Front-end - Static Web App"
+  subgraph "Front-end Static"
     fui[Angular UI]
   end
   subgraph "Back-end"
