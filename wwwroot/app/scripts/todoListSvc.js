@@ -6,6 +6,9 @@ angular.module('todoApp')
     delete $http.defaults.headers.common['X-Requested-With']; 
 
     return {
+        setAuth: function (token) {
+            $http.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+        },
         getItems : function(){
             return $http.get(apiEndpoint + '/api/todo');
         },
