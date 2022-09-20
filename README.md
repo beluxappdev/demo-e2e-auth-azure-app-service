@@ -222,3 +222,46 @@ flowchart LR
 ## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## Branches
+
+The branches are the following:
+- master: corresponds to the master branch of the forked Github repository - https://github.com/Azure-Samples/dotnet-core-api - and the updated code to use .NET 6.
+- main: is the main/default branch of the repository. It contains the changes done in the master branch. It also contains a script for to create the resources of the e2e authentication tutorial.This README.md is also updated to explain how to deploy the demo.
+- frontend: contains the code of the front-end Web App that calls the back-ned API on behalf of the authenticated user from ASP.NET API.
+- frontendng: contains the code of the front-end-ng Web App that calls the back-ned API on behalf of the authenticated user directly from the browser code.
+- frontendngstatic: contains the code of the front-end-ng Web App that calls the back-ned API on behalf of the authenticated user directly from the browser code. The front-end is deployed as a static Web App.
+
+```mermaid
+%%{init: { 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'master'}} }%%
+gitGraph
+  commit id: "Fork update 1"
+  commit id: "Fork update 2"
+  branch main
+  commit id: "Add script to deploy"
+  commit id: "Update README.md"
+  branch frontend
+  commit id: "Update to use back-end API from front-end API"
+  branch frontendng
+  commit id: "Update front-end UI to call back-end API"
+  branch frontendngstatic
+  commit id: "Remove ASP.NET implementation and add config for static Web App"
+  checkout main
+  commit id: "Update README.md 2"
+  checkout frontend
+  commit id: "Fix issue in front-end API"
+  merge main
+  commit id: "Update script"
+  checkout frontendng
+  commit id: "Fix issue in fron-end UI"
+  merge frontend
+  commit "Update script"
+  checkout frontendngstatic
+  merge frontendng
+  commit
+```
+
+Every branch is built on another branch following the steps of the tutorial and this README.md. Therefore if there is change in the master branch, all other branches needs to be updated with this changes. If there is an update in the main branch, the frontend needs to be updated and all the branches created from it too (cf. diagram above). Therefore, we have:
+```
+master -> main -> frontend -> frontendng -> frontendngstatic
+```
