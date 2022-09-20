@@ -6,7 +6,7 @@ using TodoApi.Models;
 
 namespace TodoApi.Controllers
 {
-  [Route("api/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class TodoController : Controller
     {
@@ -30,7 +30,7 @@ namespace TodoApi.Controllers
 
         // GET: api/Todo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodo()
+        public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
             var data = await _client.GetStringAsync($"{_remoteUrl}/api/todo");
             return JsonConvert.DeserializeObject<List<TodoItem>>(data);
@@ -73,7 +73,7 @@ namespace TodoApi.Controllers
 
         private bool TodoItemExists(long id)
         {
-            return (_context.TodoItems?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.TodoItems?.Any(e => e.Id == id)).GetValueOrDefault(false);
         }
     }
 }
