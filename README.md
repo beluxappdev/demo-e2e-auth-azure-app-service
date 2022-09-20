@@ -50,7 +50,7 @@ flowchart LR
 3. [Static Web App for the front-end](#3-static-web-app-for-the-front-end): The front-end is deployed as a static Web App containing only the Angular UI.
 4. [Use Spring Boot as back-end](#4-use-spring-boot-as-back-end): Both front-ends of points 2 and 3 are used with the Java Spring Boot version of the sample API.
 
->**Notes**
+>**Note**
 >
 >- Steps 0 to 2 are the same steps as the one provided in the [tutorial](https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-windows) referenced above.
 >- Step 3 is a new step that shows how to deploy the front-end as a static Web App.
