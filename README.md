@@ -111,7 +111,7 @@ The first modification of the [tutorial](https://docs.microsoft.com/en-us/azure/
 
 The result of this step is available in the branch _frontend_. To deploy it, you need to run the script of this branch _02_Update_Frontend.ps1_.
 
->**Notes**
+>**Note**
 >* Update the name in the script to match the name of the front-end Web App and the resource group created in the previous step.
 >* In _TodoController.cs_, the attribute __remoteUrl_ needs to be updated with the URL of the back-end Web App.
 
